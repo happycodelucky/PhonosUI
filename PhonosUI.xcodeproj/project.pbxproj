@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C54BBA9112F72A10030B72A /* PUAccelerometer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */; };
+		3C54BBB5112F768D0030B72A /* PUAccelerationSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBAF112F768D0030B72A /* PUAccelerationSignalFilter.h */; };
+		3C54BBB6112F768D0030B72A /* PUAccelerationSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB0112F768D0030B72A /* PUAccelerationSignalFilter.m */; };
+		3C54BBB7112F768D0030B72A /* PUHighPassSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */; };
+		3C54BBB8112F768D0030B72A /* PUHighPassSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */; };
+		3C54BBB9112F768D0030B72A /* PULowPassSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */; };
+		3C54BBBA112F768D0030B72A /* PULowPassSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB4112F768D0030B72A /* PULowPassSignalFilter.m */; };
+		3CEDEF50112E137C0061761D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDEF4F112E137C0061761D /* UIKit.framework */; };
+		3CEDEF54112E13850061761D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDEF53112E13850061761D /* SystemConfiguration.framework */; };
+		3CEDEF6F112E1A3D0061761D /* PUAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */; };
+		3CEDEF70112E1A3D0061761D /* PUAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEDEF6E112E1A3D0061761D /* PUAccelerometer.m */; };
+		3CEDEF78112F1AF80061761D /* PhonosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CEDEF77112F1AF80061761D /* PhonosUI.h */; };
+		AA747D9F0F9514B9006C5449 /* PhonosUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* PhonosUI_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C54BB55112F72820030B72A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			comments = "Copies the required header files to the products location so they can be include with the project.";
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				3C54BBA9112F72A10030B72A /* PUAccelerometer.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C54BBAF112F768D0030B72A /* PUAccelerationSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerationSignalFilter.h; sourceTree = "<group>"; };
+		3C54BBB0112F768D0030B72A /* PUAccelerationSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUAccelerationSignalFilter.m; sourceTree = "<group>"; };
+		3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUHighPassSignalFilter.h; sourceTree = "<group>"; };
+		3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUHighPassSignalFilter.m; sourceTree = "<group>"; };
+		3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULowPassSignalFilter.h; sourceTree = "<group>"; };
+		3C54BBB4112F768D0030B72A /* PULowPassSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULowPassSignalFilter.m; sourceTree = "<group>"; };
+		3CEDEF4F112E137C0061761D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3CEDEF53112E13850061761D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerometer.h; sourceTree = "<group>"; };
+		3CEDEF6E112E1A3D0061761D /* PUAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUAccelerometer.m; sourceTree = "<group>"; };
+		3CEDEF77112F1AF80061761D /* PhonosUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonosUI.h; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* PhonosUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonosUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libPhonosUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhonosUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				3CEDEF50112E137C0061761D /* UIKit.framework in Frameworks */,
+				3CEDEF54112E13850061761D /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libPhonosUI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* PhonosUI */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				3CEDEF77112F1AF80061761D /* PhonosUI.h */,
+			);
+			name = PhonosUI;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				3CEDEF4F112E137C0061761D /* UIKit.framework */,
+				3CEDEF53112E13850061761D /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3C54BBAF112F768D0030B72A /* PUAccelerationSignalFilter.h */,
+				3C54BBB0112F768D0030B72A /* PUAccelerationSignalFilter.m */,
+				3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */,
+				3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */,
+				3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */,
+				3C54BBB4112F768D0030B72A /* PULowPassSignalFilter.m */,
+				3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */,
+				3CEDEF6E112E1A3D0061761D /* PUAccelerometer.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* PhonosUI_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* PhonosUI_Prefix.pch in Headers */,
+				3CEDEF6F112E1A3D0061761D /* PUAccelerometer.h in Headers */,
+				3CEDEF78112F1AF80061761D /* PhonosUI.h in Headers */,
+				3C54BBB5112F768D0030B72A /* PUAccelerationSignalFilter.h in Headers */,
+				3C54BBB7112F768D0030B72A /* PUHighPassSignalFilter.h in Headers */,
+				3C54BBB9112F768D0030B72A /* PULowPassSignalFilter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* PhonosUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "PhonosUI" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+				3C54BB55112F72820030B72A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhonosUI;
+			productName = PhonosUI;
+			productReference = D2AAC07E0554694100DB518D /* libPhonosUI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "PhonosUI" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* PhonosUI */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* PhonosUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CEDEF70112E1A3D0061761D /* PUAccelerometer.m in Sources */,
+				3C54BBB6112F768D0030B72A /* PUAccelerationSignalFilter.m in Sources */,
+				3C54BBB8112F768D0030B72A /* PUHighPassSignalFilter.m in Sources */,
+				3C54BBBA112F768D0030B72A /* PULowPassSignalFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/PhonosUI.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PhonosUI_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = PhonosUI;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/PhonosUI.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PhonosUI_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = PhonosUI;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "PhonosUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "PhonosUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
