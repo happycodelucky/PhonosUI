@@ -27,7 +27,7 @@
 
 
 -(id)initWithSampleRate:(double)rate cutoffFrequency:(double)frequency {
-	if ((self = [self init])) {
+	if ((self = [super init])) {
 		double dt = 1.0 / rate;
 		double RC = 1.0 / frequency;
 		filterConstant_ = dt / (dt + RC);

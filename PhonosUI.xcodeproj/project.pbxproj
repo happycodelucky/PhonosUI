@@ -33,9 +33,15 @@
 		3C54BC6611309F460030B72A /* PULowPassSignalFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */; };
 		3C54BC6711309F460030B72A /* PUHighPassSignalFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */; };
 		3C54BC6811309F460030B72A /* PhonosUI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CEDEF77112F1AF80061761D /* PhonosUI.h */; };
-		3C54BD601131F3980030B72A /* PUAccelerationSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD5E1131F3980030B72A /* PUAccelerationSignalFilter.h */; };
-		3C54BD611131F3980030B72A /* PUAccelerationSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BD5F1131F3980030B72A /* PUAccelerationSignalFilter.m */; };
 		3C54BD631131F4B10030B72A /* AccelerationSignalFilterFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD621131F4B10030B72A /* AccelerationSignalFilterFunctions.h */; };
+		3C54BD89113202810030B72A /* PUAccelerationSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD82113202810030B72A /* PUAccelerationSignalFilter.h */; };
+		3C54BD8A113202810030B72A /* PUAccelerationSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BD83113202810030B72A /* PUAccelerationSignalFilter.m */; };
+		3C54BD8B113202810030B72A /* PUApplicationServiceCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD84113202810030B72A /* PUApplicationServiceCoordinator.h */; };
+		3C54BD8D113202810030B72A /* PUInterfaceNames.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD86113202810030B72A /* PUInterfaceNames.h */; };
+		3C54BD8E113202810030B72A /* PULog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD87113202810030B72A /* PULog.h */; };
+		3C54BD9A1132037D0030B72A /* UIDevice+PhonosUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD971132037D0030B72A /* UIDevice+PhonosUI.h */; };
+		3C54BDEF1132FDD30030B72A /* PUApplicationServiceCoordinator.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C54BD85113202810030B72A /* PUApplicationServiceCoordinator.m */; };
+		3C54BDF21132FDE90030B72A /* PUApplicationServiceCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BD85113202810030B72A /* PUApplicationServiceCoordinator.m */; };
 		3CEDEF50112E137C0061761D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDEF4F112E137C0061761D /* UIKit.framework */; };
 		3CEDEF54112E13850061761D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDEF53112E13850061761D /* SystemConfiguration.framework */; };
 		3CEDEF6F112E1A3D0061761D /* PUAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */; };
@@ -67,6 +73,7 @@
 				3C54BC6611309F460030B72A /* PULowPassSignalFilter.h in CopyFiles */,
 				3C54BC6711309F460030B72A /* PUHighPassSignalFilter.h in CopyFiles */,
 				3C54BC6811309F460030B72A /* PhonosUI.h in CopyFiles */,
+				3C54BDEF1132FDD30030B72A /* PUApplicationServiceCoordinator.m in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,9 +86,15 @@
 		3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUHighPassSignalFilter.m; sourceTree = "<group>"; };
 		3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULowPassSignalFilter.h; sourceTree = "<group>"; };
 		3C54BBB4112F768D0030B72A /* PULowPassSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULowPassSignalFilter.m; sourceTree = "<group>"; };
-		3C54BD5E1131F3980030B72A /* PUAccelerationSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PUAccelerationSignalFilter.h; path = Private/PUAccelerationSignalFilter.h; sourceTree = "<group>"; };
-		3C54BD5F1131F3980030B72A /* PUAccelerationSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PUAccelerationSignalFilter.m; path = Private/PUAccelerationSignalFilter.m; sourceTree = "<group>"; };
 		3C54BD621131F4B10030B72A /* AccelerationSignalFilterFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerationSignalFilterFunctions.h; path = Private/AccelerationSignalFilterFunctions.h; sourceTree = "<group>"; };
+		3C54BD82113202810030B72A /* PUAccelerationSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerationSignalFilter.h; sourceTree = "<group>"; };
+		3C54BD83113202810030B72A /* PUAccelerationSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUAccelerationSignalFilter.m; sourceTree = "<group>"; };
+		3C54BD84113202810030B72A /* PUApplicationServiceCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUApplicationServiceCoordinator.h; sourceTree = "<group>"; };
+		3C54BD85113202810030B72A /* PUApplicationServiceCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUApplicationServiceCoordinator.m; sourceTree = "<group>"; };
+		3C54BD86113202810030B72A /* PUInterfaceNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUInterfaceNames.h; sourceTree = "<group>"; };
+		3C54BD87113202810030B72A /* PULog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULog.h; sourceTree = "<group>"; };
+		3C54BD971132037D0030B72A /* UIDevice+PhonosUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+PhonosUI.h"; path = "Extensions/UIDevice+PhonosUI.h"; sourceTree = "<group>"; };
+		3C54BD981132037D0030B72A /* UIDevice+PhonosUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PhonosUI.m"; path = "Extensions/UIDevice+PhonosUI.m"; sourceTree = "<group>"; };
 		3CEDEF4F112E137C0061761D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CEDEF53112E13850061761D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerometer.h; sourceTree = "<group>"; };
@@ -117,11 +130,10 @@
 		0867D691FE84028FC02AAC07 /* PhonosUI */ = {
 			isa = PBXGroup;
 			children = (
-				08FB77AEFE84172EC02AAC07 /* Classes */,
+				3C54BD92113202CA0030B72A /* Library */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				3CEDEF77112F1AF80061761D /* PhonosUI.h */,
 			);
 			name = PhonosUI;
 			sourceTree = "<group>";
@@ -139,11 +151,13 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3C54BD4D1131F2B70030B72A /* Private */,
+				3C54BD91113202BD0030B72A /* Extensions */,
+				3C54BD84113202810030B72A /* PUApplicationServiceCoordinator.h */,
+				3C54BD85113202810030B72A /* PUApplicationServiceCoordinator.m */,
 				3C54BBAF112F768D0030B72A /* PUAccelerationFilter.h */,
 				3C54BBB0112F768D0030B72A /* PUAccelerationFilter.m */,
-				3C54BD5E1131F3980030B72A /* PUAccelerationSignalFilter.h */,
-				3C54BD5F1131F3980030B72A /* PUAccelerationSignalFilter.m */,
+				3C54BD82113202810030B72A /* PUAccelerationSignalFilter.h */,
+				3C54BD83113202810030B72A /* PUAccelerationSignalFilter.m */,
 				3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */,
 				3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */,
 				3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */,
@@ -162,12 +176,33 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		3C54BD4D1131F2B70030B72A /* Private */ = {
+		3C54BD90113202B30030B72A /* Private */ = {
 			isa = PBXGroup;
 			children = (
 				3C54BD621131F4B10030B72A /* AccelerationSignalFilterFunctions.h */,
 			);
 			name = Private;
+			sourceTree = "<group>";
+		};
+		3C54BD91113202BD0030B72A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C54BD971132037D0030B72A /* UIDevice+PhonosUI.h */,
+				3C54BD981132037D0030B72A /* UIDevice+PhonosUI.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		3C54BD92113202CA0030B72A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3CEDEF77112F1AF80061761D /* PhonosUI.h */,
+				3C54BD86113202810030B72A /* PUInterfaceNames.h */,
+				3C54BD87113202810030B72A /* PULog.h */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				3C54BD90113202B30030B72A /* Private */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,8 +218,12 @@
 				3C54BBB5112F768D0030B72A /* PUAccelerationFilter.h in Headers */,
 				3C54BBB7112F768D0030B72A /* PUHighPassSignalFilter.h in Headers */,
 				3C54BBB9112F768D0030B72A /* PULowPassSignalFilter.h in Headers */,
-				3C54BD601131F3980030B72A /* PUAccelerationSignalFilter.h in Headers */,
 				3C54BD631131F4B10030B72A /* AccelerationSignalFilterFunctions.h in Headers */,
+				3C54BD89113202810030B72A /* PUAccelerationSignalFilter.h in Headers */,
+				3C54BD8B113202810030B72A /* PUApplicationServiceCoordinator.h in Headers */,
+				3C54BD8D113202810030B72A /* PUInterfaceNames.h in Headers */,
+				3C54BD8E113202810030B72A /* PULog.h in Headers */,
+				3C54BD9A1132037D0030B72A /* UIDevice+PhonosUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +275,8 @@
 				3C54BBB6112F768D0030B72A /* PUAccelerationFilter.m in Sources */,
 				3C54BBB8112F768D0030B72A /* PUHighPassSignalFilter.m in Sources */,
 				3C54BBBA112F768D0030B72A /* PULowPassSignalFilter.m in Sources */,
-				3C54BD611131F3980030B72A /* PUAccelerationSignalFilter.m in Sources */,
+				3C54BD8A113202810030B72A /* PUAccelerationSignalFilter.m in Sources */,
+				3C54BDF21132FDE90030B72A /* PUApplicationServiceCoordinator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

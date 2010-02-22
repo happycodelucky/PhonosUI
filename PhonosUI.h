@@ -7,6 +7,9 @@
  *
  */
 
+#import "PUInterfaceNames.h"
+#import "PULog.h"
+
 #import "PUAccelerationSignalFilter.h"
 #import "PULowPassSignalFilter.h"
 #import "PUHighPassSignalFilter.h"

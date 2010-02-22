@@ -10,9 +10,6 @@
  *
  */
 
-#import <math.h>
-
-
 // Filtering constants
 #define kPUAccelerometerMinStep				0.02
 #define kPUAccelerometerNoiseAttenuation	3.0
@@ -22,21 +19,19 @@
 #define kPUAccelerometerCutOffFrequency		5.0
 
 
-//	NormalizeSignal(x, y, z)
+// NormalizeSignal(x, y, z)
 //	Normalizes an acceleration's axis signals.
-//
-inline double NormalizeSignal(double x, double y, double z) {
+static inline double NormalizeSignal(double x, double y, double z) {
 	return sqrt(x * x + y * y + z * z);
 }
 
-//	ClampSignal(v, min, max)
+// ClampSignal(v, min, max)
 //	Limits an accelerations's axis signal between a minimum and maximum range.
-//
-inline double ClampSignal(double v, double min, double max) {
+static inline double ClampSignal(double v, double min, double max) {
 	if(v > max)
 		return max;
 	else if(v < min)
 		return min;
 	else
-		return v;
+		return v;	
 }

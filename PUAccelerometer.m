@@ -11,7 +11,7 @@
 
 
 // Singleton global for PUAccelerometer.
-static PUAccelerometer *defaultPUAccelerometer = nil;
+static PUAccelerometer *__PUAccelerometer = nil;
 static PUAccelerationFilter *defaultAccelerationFilter = nil;
 
 
@@ -44,15 +44,15 @@ static PUAccelerationFilter *defaultAccelerationFilter = nil;
 + (PUAccelerometer *)sharedAccelerometer
 {
 	@synchronized(self) {
-		if (defaultPUAccelerometer == nil) {
+		if (__PUAccelerometer == nil) {
 			// No assignment necessary here, see allocWithZone, but allow
 			// the LLVM analyzer to report all is well.
-			defaultPUAccelerometer = [[self alloc] init];
+			__PUAccelerometer = [[self alloc] init];
 		}
 	}
 	
-	//PFAssertNotNil(g_defaultPUAccelerometer);
-	return defaultPUAccelerometer;
+	//PFAssertNotNil(g___PUAccelerometer);
+	return __PUAccelerometer;
 }
 
 
@@ -221,10 +221,10 @@ static PUAccelerationFilter *defaultAccelerationFilter = nil;
 
 + (id)allocWithZone:(NSZone *)zone {
 	@synchronized(self) {
-		if (defaultPUAccelerometer == nil) {
+		if (__PUAccelerometer == nil) {
 			// Assignment and return on first allocation.
-			defaultPUAccelerometer = [super allocWithZone:zone];
-			return defaultPUAccelerometer; 
+			__PUAccelerometer = [super allocWithZone:zone];
+			return __PUAccelerometer; 
 		}
 	}
 	
