@@ -9,6 +9,13 @@
 #import "PUAccelerationSignalFilter.h"
 
 
+/*
+ * @interface PULowPassSignalFilter
+ *
+ *	Performs Low-Pass signal filtering as described in the article found at
+ *	http://en.wikipedia.org/wiki/Low_pass_filter
+ *
+ */
 @interface PULowPassSignalFilter : PUAccelerationSignalFilter
 
 @end

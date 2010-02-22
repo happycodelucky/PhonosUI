@@ -9,6 +9,13 @@
 #import "PUAccelerationSignalFilter.h"
 
 
+/*
+ * @interface PUAccelerationSignalFilter
+ *
+ *	Performs High-Pass signal filtering as described in the article found at
+ *	http://en.wikipedia.org/wiki/High_pass_filter
+ *
+ */
 @interface PUHighPassSignalFilter : PUAccelerationSignalFilter {
 	UIAccelerationValue lastX_, lastY_, lastZ_;	
 }

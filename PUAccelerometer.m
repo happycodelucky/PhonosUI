@@ -7,12 +7,12 @@
 //
 
 #import "PUAccelerometer.h"
-#import "PUAccelerationSignalFilter.h"
+#import "PUAccelerationFilter.h"
 
 
 // Singleton global for PUAccelerometer.
 static PUAccelerometer *defaultPUAccelerometer = nil;
-static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
+static PUAccelerationFilter *defaultAccelerationFilter = nil;
 
 
 /*******************************************************************************
@@ -22,7 +22,7 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 
 // Factory method for creating the default acceleration filter, for filterless
 // calls when starting an update. See startUpdating:atInterval.
-- (PUAccelerationSignalFilter *)createDefaultAccelerationFilter;
+- (PUAccelerationFilter *)createDefaultAccelerationFilter;
 
 @end
 
@@ -41,7 +41,7 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 #pragma mark -
 #pragma mark Singleton
 
-+ (PUAccelerometer *)defaultAccelerometer
++ (PUAccelerometer *)sharedAccelerometer
 {
 	@synchronized(self) {
 		if (defaultPUAccelerometer == nil) {
@@ -59,7 +59,7 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 #pragma mark -
 #pragma mark Public instance methods
 
-- (BOOL)startUpdating:(id<PUAccelerometerFilterDelegate>)delegate atInterval:(NSTimeInterval)interval {
+- (BOOL)startUpdating:(NSObject<PUAccelerometerFilterDelegate> *)delegate atInterval:(NSTimeInterval)interval {
 	if (self.isUpdating) {
 		// Can't have two calls to update!!
 		return NO;	
@@ -67,7 +67,7 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 	
 	if (!self.isUpdating) {
 		@synchronized(self) {			
-			PUAccelerationSignalFilter *defaultFilter = defaultAccelerationFilter;
+			PUAccelerationFilter *defaultFilter = defaultAccelerationFilter;
 			if (defaultFilter == nil) {
 				defaultFilter = [self createDefaultAccelerationFilter];
 				if (defaultFilter == nil) {
@@ -86,13 +86,12 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 }
 
 
-- (BOOL)startUpdating:(id<PUAccelerometerFilterDelegate>)aDelegate atInterval:(NSTimeInterval)aInterval usingFilter:(PUAccelerationSignalFilter *)aFilter {
+- (BOOL)startUpdating:(NSObject<PUAccelerometerFilterDelegate> *)aDelegate atInterval:(NSTimeInterval)aInterval usingFilter:(PUAccelerationFilter *)aFilter {
 	if (self.isUpdating) {
 		// Can't have two calls to update!!
 		return NO;	
 	}
 	
-	NSObject<PUAccelerometerFilterDelegate> *currentDelegate = nil;
 	@synchronized(self) {
 		// Release any previous filter. This is not required but do it just for future proofing
 		//PFAssertTagIsNil(filter_)
@@ -104,8 +103,6 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 		// Set class attributes...
 		_filter = [aFilter retain];
 		_updateInterval = aInterval;
-		
-		currentDelegate = [self.delegate retain]; // retaing for MT preservation
 
 		// Yes we are updating (set before delegate assignment in case there is
 		// an update call before
@@ -113,11 +110,11 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 	}
 	
 	
-	if (currentDelegate != nil && [currentDelegate respondsToSelector:@selector(accelerometerWillBeginUpdating:)]) {
+	if (aDelegate != nil && [aDelegate respondsToSelector:@selector(accelerometerWillBeginUpdating:)]) {
 		// Send message to delegate to notify it updates will begin shortly.
-		[currentDelegate accelerometerWillBeginUpdating:self];
+		[aDelegate accelerometerWillBeginUpdating:self];
 	}
-	[currentDelegate release];
+	_delegate = [aDelegate retain];
 	
 	// Now actually get the accelerometer to notify us.
 	UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
@@ -186,7 +183,7 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
 	//PFAssert1(self.isUpdating, @"UIAccelerometer updated but %@ is not currently updating.", NSStringFromClass([self class]));
 	
-	PUAccelerationSignalFilter *activeFilter = nil;
+	PUAccelerationFilter *activeFilter = nil;
 	NSObject<PUAccelerometerFilterDelegate> *currentDelegate = nil;
 	@synchronized(self) {
 		activeFilter = [self.filter retain]; // retain for MT preservation.
@@ -197,7 +194,7 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 	//PFAssertTNotNil(currentDelegate);
 	if (activeFilter != nil) {
 		@try {
-			[activeFilter addSignal:acceleration];
+			[activeFilter addAcceleration:acceleration];
 			if (currentDelegate != nil) {
 				// Notify update.
 				[currentDelegate accelerometer:self didFilterAcceleration:activeFilter];
@@ -214,8 +211,8 @@ static PUAccelerationSignalFilter *defaultAccelerationFilter = nil;
 #pragma mark -
 #pragma mark Private implementation methods
 
-- (PUAccelerationSignalFilter *)createDefaultAccelerationFilter {
-	return [[[PUAccelerationSignalFilter alloc] initWithSampleRate:1.0 cutoffFrequency:2.0] autorelease];
+- (PUAccelerationFilter *)createDefaultAccelerationFilter {
+	return [[[PUAccelerationFilter alloc] init] autorelease];
 }
 
 

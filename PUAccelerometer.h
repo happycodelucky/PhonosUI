@@ -12,7 +12,7 @@
 
 // Forward declarations
 @class PUAccelerometer;
-@class PUAccelerationSignalFilter;
+@class PUAccelerationFilter;
 
 
 /*
@@ -24,7 +24,7 @@
 @protocol PUAccelerometerFilterDelegate
 
 @required
-- (void)accelerometer:(PUAccelerometer *)accelerometer didFilterAcceleration:(PUAccelerationSignalFilter *)filter;
+- (void)accelerometer:(PUAccelerometer *)accelerometer didFilterAcceleration:(PUAccelerationFilter *)filter;
 
 @optional
 - (void)accelerometerWillBeginUpdating:(PUAccelerometer *)accelerometer;
@@ -36,25 +36,25 @@
 /*
  * @interface PUAccelerometer
  *
- *	Single
+ *	Singleton accelerometer class for use with PUAccelerationFilter objects.
  *
  */
 @interface PUAccelerometer : NSObject <UIAccelerometerDelegate> {
 @protected
 	NSObject<PUAccelerometerFilterDelegate> *_delegate;
 	NSTimeInterval _updateInterval;
-	PUAccelerationSignalFilter *_filter;
+	PUAccelerationFilter *_filter;
 	BOOL _updating;
 }
 @property (nonatomic, retain) NSObject<PUAccelerometerFilterDelegate> *delegate;
-@property (nonatomic, readonly) PUAccelerationSignalFilter *filter;
+@property (nonatomic, readonly) PUAccelerationFilter *filter;
 @property (nonatomic, readonly) NSTimeInterval updateInterval;
 @property (nonatomic, readonly, getter=isUpdating) BOOL updating;
 
-+ (PUAccelerometer *)defaultAccelerometer;
++ (PUAccelerometer *)sharedAccelerometer;
 
-- (BOOL)startUpdating:(id <PUAccelerometerFilterDelegate>)aDelegate atInterval:(NSTimeInterval)aInterval;
-- (BOOL)startUpdating:(id <PUAccelerometerFilterDelegate>)aDelegate atInterval:(NSTimeInterval)aInterval usingFilter:(PUAccelerationSignalFilter *)aFilter;
+- (BOOL)startUpdating:(NSObject<PUAccelerometerFilterDelegate> *)aDelegate atInterval:(NSTimeInterval)aInterval;
+- (BOOL)startUpdating:(NSObject<PUAccelerometerFilterDelegate> *)aDelegate atInterval:(NSTimeInterval)aInterval usingFilter:(PUAccelerationFilter *)aFilter;
 - (void)stopUpdating;
 
 @end

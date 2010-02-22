@@ -7,37 +7,38 @@
 //
 
 #import "PUHighPassSignalFilter.h"
+#import "AccelerationSignalFilterFunctions.h"
 
-double NormalizeSignal(double x, double y, double z);
-double ClampSignal(double v, double min, double max);
 
+/*******************************************************************************
+ PUHighPassSignalFilter implementation
+ ******************************************************************************/
 @implementation PUHighPassSignalFilter
 
-
 #pragma mark -
-#pragma mark Public instance methods
+#pragma mark Private instance methods
 
--(void)addSignal:(UIAcceleration*)signal {
+-(void)filterAcceleration:(UIAcceleration*)acceleration {
 	double alpha = filterConstant_;
-	double sx = signal.x;
-	double sy = signal.y;
-	double sz = signal.z;
+	double ax = acceleration.x;
+	double ay = acceleration.y;
+	double az = acceleration.z;
 	
 	if(self.isAdaptive)
 	{
 		double d = ClampSignal(fabs(NormalizeSignal(x_, y_, z_) - 
-									NormalizeSignal(sx, sy, sz)
-									) / kAccelerometerMinStep - 1.0, 0.0, 1.0);
-		alpha = d * alpha / kAccelerometerNoiseAttenuation + (1.0 - d) * alpha;
+									NormalizeSignal(ax, ay, az)
+									) / kPUAccelerometerMinStep - 1.0, 0.0, 1.0);
+		alpha = d * alpha / kPUAccelerometerNoiseAttenuation + (1.0 - d) * alpha;
 	}
 	
-	x_ = alpha * (x_ + sx - lastX_);
-	y_ = alpha * (y_ + sy - lastY_);
-	z_ = alpha * (z_ + sz - lastZ_);
+	x_ = alpha * (x_ + ax - lastX_);
+	y_ = alpha * (y_ + ay - lastY_);
+	z_ = alpha * (z_ + az - lastZ_);
 	
-	lastX_ = sx;
-	lastY_ = sy;
-	lastZ_ = sz;
+	lastX_ = ax;
+	lastY_ = ay;
+	lastZ_ = az;
 }
 
 @end

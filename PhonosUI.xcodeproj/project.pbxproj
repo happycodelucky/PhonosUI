@@ -6,14 +6,36 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3C54BC5F11309F210030B72A /* Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3C54BC7811309F710030B72A /* Build configuration list for PBXAggregateTarget "Test" */;
+			buildPhases = (
+				3C54BC7711309F710030B72A /* CopyFiles */,
+			);
+			dependencies = (
+				3C54BC8311309FA80030B72A /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = Test;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		3C54BBA9112F72A10030B72A /* PUAccelerometer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */; };
-		3C54BBB5112F768D0030B72A /* PUAccelerationSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBAF112F768D0030B72A /* PUAccelerationSignalFilter.h */; };
-		3C54BBB6112F768D0030B72A /* PUAccelerationSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB0112F768D0030B72A /* PUAccelerationSignalFilter.m */; };
+		3C54BBB5112F768D0030B72A /* PUAccelerationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBAF112F768D0030B72A /* PUAccelerationFilter.h */; };
+		3C54BBB6112F768D0030B72A /* PUAccelerationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB0112F768D0030B72A /* PUAccelerationFilter.m */; };
 		3C54BBB7112F768D0030B72A /* PUHighPassSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */; };
 		3C54BBB8112F768D0030B72A /* PUHighPassSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */; };
 		3C54BBB9112F768D0030B72A /* PULowPassSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */; };
 		3C54BBBA112F768D0030B72A /* PULowPassSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BBB4112F768D0030B72A /* PULowPassSignalFilter.m */; };
+		3C54BC6411309F460030B72A /* PUAccelerationFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C54BBAF112F768D0030B72A /* PUAccelerationFilter.h */; };
+		3C54BC6511309F460030B72A /* PUAccelerometer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */; };
+		3C54BC6611309F460030B72A /* PULowPassSignalFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */; };
+		3C54BC6711309F460030B72A /* PUHighPassSignalFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */; };
+		3C54BC6811309F460030B72A /* PhonosUI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CEDEF77112F1AF80061761D /* PhonosUI.h */; };
+		3C54BD601131F3980030B72A /* PUAccelerationSignalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD5E1131F3980030B72A /* PUAccelerationSignalFilter.h */; };
+		3C54BD611131F3980030B72A /* PUAccelerationSignalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54BD5F1131F3980030B72A /* PUAccelerationSignalFilter.m */; };
+		3C54BD631131F4B10030B72A /* AccelerationSignalFilterFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C54BD621131F4B10030B72A /* AccelerationSignalFilterFunctions.h */; };
 		3CEDEF50112E137C0061761D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDEF4F112E137C0061761D /* UIKit.framework */; };
 		3CEDEF54112E13850061761D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEDEF53112E13850061761D /* SystemConfiguration.framework */; };
 		3CEDEF6F112E1A3D0061761D /* PUAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */; };
@@ -23,27 +45,43 @@
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C54BC8211309FA80030B72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* PhonosUI */;
+			remoteInfo = PhonosUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		3C54BB55112F72820030B72A /* CopyFiles */ = {
+		3C54BC7711309F710030B72A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			comments = "Copies the required header files to the products location so they can be include with the project.";
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				3C54BBA9112F72A10030B72A /* PUAccelerometer.h in CopyFiles */,
+				3C54BC6411309F460030B72A /* PUAccelerationFilter.h in CopyFiles */,
+				3C54BC6511309F460030B72A /* PUAccelerometer.h in CopyFiles */,
+				3C54BC6611309F460030B72A /* PULowPassSignalFilter.h in CopyFiles */,
+				3C54BC6711309F460030B72A /* PUHighPassSignalFilter.h in CopyFiles */,
+				3C54BC6811309F460030B72A /* PhonosUI.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C54BBAF112F768D0030B72A /* PUAccelerationSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerationSignalFilter.h; sourceTree = "<group>"; };
-		3C54BBB0112F768D0030B72A /* PUAccelerationSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUAccelerationSignalFilter.m; sourceTree = "<group>"; };
+		3C54BBAF112F768D0030B72A /* PUAccelerationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerationFilter.h; sourceTree = "<group>"; };
+		3C54BBB0112F768D0030B72A /* PUAccelerationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUAccelerationFilter.m; sourceTree = "<group>"; };
 		3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUHighPassSignalFilter.h; sourceTree = "<group>"; };
 		3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUHighPassSignalFilter.m; sourceTree = "<group>"; };
 		3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULowPassSignalFilter.h; sourceTree = "<group>"; };
 		3C54BBB4112F768D0030B72A /* PULowPassSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULowPassSignalFilter.m; sourceTree = "<group>"; };
+		3C54BD5E1131F3980030B72A /* PUAccelerationSignalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PUAccelerationSignalFilter.h; path = Private/PUAccelerationSignalFilter.h; sourceTree = "<group>"; };
+		3C54BD5F1131F3980030B72A /* PUAccelerationSignalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PUAccelerationSignalFilter.m; path = Private/PUAccelerationSignalFilter.m; sourceTree = "<group>"; };
+		3C54BD621131F4B10030B72A /* AccelerationSignalFilterFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerationSignalFilterFunctions.h; path = Private/AccelerationSignalFilterFunctions.h; sourceTree = "<group>"; };
 		3CEDEF4F112E137C0061761D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CEDEF53112E13850061761D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3CEDEF6D112E1A3D0061761D /* PUAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAccelerometer.h; sourceTree = "<group>"; };
@@ -101,8 +139,11 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3C54BBAF112F768D0030B72A /* PUAccelerationSignalFilter.h */,
-				3C54BBB0112F768D0030B72A /* PUAccelerationSignalFilter.m */,
+				3C54BD4D1131F2B70030B72A /* Private */,
+				3C54BBAF112F768D0030B72A /* PUAccelerationFilter.h */,
+				3C54BBB0112F768D0030B72A /* PUAccelerationFilter.m */,
+				3C54BD5E1131F3980030B72A /* PUAccelerationSignalFilter.h */,
+				3C54BD5F1131F3980030B72A /* PUAccelerationSignalFilter.m */,
 				3C54BBB1112F768D0030B72A /* PUHighPassSignalFilter.h */,
 				3C54BBB2112F768D0030B72A /* PUHighPassSignalFilter.m */,
 				3C54BBB3112F768D0030B72A /* PULowPassSignalFilter.h */,
@@ -121,6 +162,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		3C54BD4D1131F2B70030B72A /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				3C54BD621131F4B10030B72A /* AccelerationSignalFilterFunctions.h */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,9 +180,11 @@
 				AA747D9F0F9514B9006C5449 /* PhonosUI_Prefix.pch in Headers */,
 				3CEDEF6F112E1A3D0061761D /* PUAccelerometer.h in Headers */,
 				3CEDEF78112F1AF80061761D /* PhonosUI.h in Headers */,
-				3C54BBB5112F768D0030B72A /* PUAccelerationSignalFilter.h in Headers */,
+				3C54BBB5112F768D0030B72A /* PUAccelerationFilter.h in Headers */,
 				3C54BBB7112F768D0030B72A /* PUHighPassSignalFilter.h in Headers */,
 				3C54BBB9112F768D0030B72A /* PULowPassSignalFilter.h in Headers */,
+				3C54BD601131F3980030B72A /* PUAccelerationSignalFilter.h in Headers */,
+				3C54BD631131F4B10030B72A /* AccelerationSignalFilterFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +198,6 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
-				3C54BB55112F72820030B72A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -172,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* PhonosUI */,
+				3C54BC5F11309F210030B72A /* Test */,
 			);
 		};
 /* End PBXProject section */
@@ -182,13 +233,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CEDEF70112E1A3D0061761D /* PUAccelerometer.m in Sources */,
-				3C54BBB6112F768D0030B72A /* PUAccelerationSignalFilter.m in Sources */,
+				3C54BBB6112F768D0030B72A /* PUAccelerationFilter.m in Sources */,
 				3C54BBB8112F768D0030B72A /* PUHighPassSignalFilter.m in Sources */,
 				3C54BBBA112F768D0030B72A /* PULowPassSignalFilter.m in Sources */,
+				3C54BD611131F3980030B72A /* PUAccelerationSignalFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C54BC8311309FA80030B72A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* PhonosUI */;
+			targetProxy = 3C54BC8211309FA80030B72A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -250,6 +310,27 @@
 			};
 			name = Release;
 		};
+		3C54BC6011309F220030B72A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Test;
+			};
+			name = Debug;
+		};
+		3C54BC6111309F220030B72A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Test;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -267,6 +348,15 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C54BC7811309F710030B72A /* Build configuration list for PBXAggregateTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C54BC6011309F220030B72A /* Debug */,
+				3C54BC6111309F220030B72A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
